@@ -11,7 +11,7 @@ pipeline {
                     sh 'sudo kubectl version --client'
                     sh 'sudo kubectl get pods'
                     //kubernetesDeploy(configs: "deployservice.yaml", kubeconfigId: "Kubernetes")
-                //}
+                }
             }
         }
     }
