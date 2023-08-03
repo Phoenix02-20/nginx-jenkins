@@ -28,7 +28,7 @@ pipeline {
             //sh "sudo kubectl --kubeconfig=${KUBECONFIG} apply -f /var/lib/jenkins/workspace/jenkins-kubernetes/mysql-drupal.yaml"
               script {
                 sh "kubectl get pods"
-                kubernetesDeploy(configs: "deployserviceyaml", kubeconfigId: "kubeconfig")
+                kubernetesDeploy(configs: "deployservice.yaml", kubeconfigId: "kubeconfig")
               }
       }
      }
