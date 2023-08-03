@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     echo "Hello"
-                    kubernetesDeploy(configs: "deployment.yaml", kubeconfigId: "kubeconfig")
+                    kubernetesDeploy(configs: "deployservice.yaml", kubeconfigId: "kubeconfig")
                 }
             }
         }
