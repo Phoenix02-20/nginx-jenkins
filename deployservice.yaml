@@ -24,16 +24,3 @@ spec:
         - containerPort: 80
         resources: {}
 status: {}
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: nginx-service
-spec:
-  ports:
-  - name: http
-    port: 85
-    protocol: TCP
-  selector:
-    app: nginx-jenkins
