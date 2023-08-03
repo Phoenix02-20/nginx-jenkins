@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage ('Build Image') {
             steps {
-                sh 'docker build -t priya20xenonstack/drupal-app .'
+                sh 'docker build -t priya20xenonstack/nginx-kube .'
             }
         }
         stage ('hub login') {
@@ -16,7 +16,7 @@ pipeline {
         }
         stage ('Image Push') {
             steps {
-                sh 'docker push priya20xenonstack/drupal-app'
+                sh 'docker push priya20xenonstack/nginx-kube'
             }
         }
       
