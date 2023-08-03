@@ -6,8 +6,7 @@ pipeline {
             steps {
                 script {
                     echo "Hello"
-                    def kubeconfigPath = env.kubeconfig
-                    echo "Kubeconfig: ${kubeconfigPath}"
+                    kubernetesDeploy(configs: "deployment.yaml", kubeconfigId: "kubeconfig")
                 }
             }
         }
