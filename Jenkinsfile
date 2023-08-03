@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     echo "Hello"
-                    sh 'kubectl version --client"
+                    sh 'kubectl version --client'
                     kubernetesDeploy(configs: "deployservice.yaml", kubeconfigId: "kubeconfig")
                 }
             }
