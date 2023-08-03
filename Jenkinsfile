@@ -5,7 +5,7 @@ pipeline {
         stage('kubeconfig Path') {
             steps {
                 script {
-                    def kubeconfigPath = env.KUBECONFIG
+                    def kubeconfigPath = env.kubeconfig
                     echo "Kubeconfig: ${kubeconfigPath}"
                 }
             }
