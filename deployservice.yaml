@@ -1,3 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  ports:
+  - name: http
+    port: 85
+    protocol: TCP
+  selector:
+    app: nginx-jenkins
+  
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
